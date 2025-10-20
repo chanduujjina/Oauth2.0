@@ -24,3 +24,18 @@
 | 5️⃣  | Secure Spring Cloud Gateway            | Forward tokens                     |
 | 6️⃣  | Add scopes/roles authorization         | Enforce access rules               |
 | 7️⃣  | Use Postman or Angular to authenticate | End-to-end test                    |
+```mermaid
+flowchart LR
+    A[Resource Owner (User)]
+    B[Client Application]
+    C[Authorization Server]
+    D[Resource Server (Protected API)]
+
+    A -->|Grants Permission| C
+    B -->|Requests Authorization| A
+    B -->|Sends Auth Request| C
+    C -->|Issues Access Token| B
+    B -->|Calls API with Token| D
+    D -->|Validates Token with| C
+    D -->|Returns Protected Data| B
+```
