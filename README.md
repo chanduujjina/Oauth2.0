@@ -39,3 +39,10 @@ flowchart LR
     D -->|Validates Token with| C
     D -->|Returns Protected Data| B
 ```
+
+## 🔍 Explanation
+- The client never gets the user’s password — only an access token.
+
+- The resource server trusts the authorization server for validation.
+
+- Tokens represent delegated access, not credentials.
