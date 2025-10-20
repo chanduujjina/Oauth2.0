@@ -26,10 +26,10 @@
 | 7️⃣  | Use Postman or Angular to authenticate | End-to-end test                    |
 ```mermaid
 flowchart LR
-    A[Resource Owner (User)]
+    A[Resource Owner User]
     B[Client Application]
     C[Authorization Server]
-    D[Resource Server (Protected API)]
+    D[Resource Server Protected API]
 
     A -->|Grants Permission| C
     B -->|Requests Authorization| A
